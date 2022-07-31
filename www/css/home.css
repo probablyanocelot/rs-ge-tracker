@@ -1,0 +1,130 @@
+body {
+  background: #071b25 url(https://www.runescape.com/img/rs3/background-main.jpg) repeat 0 0;
+  color: #d7dbe1;
+}
+
+/* Style the button that is used to open and close the collapsible content */
+.collapsible {
+  background: url(https://www.runescape.com/img/rs3/tabbedelement.png);
+  background-color: #eee;
+  color: gold;
+  /* color: #444; */
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  /* height: 100%; */
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .collapsible:hover {
+  background-color: #ccc;
+}
+
+/* Style the collapsible content. Note: hidden by default */
+.content {
+  padding: 0 18px;
+  display: none;
+  /* overflow: hidden; */
+  background-color: #f1f1f1;
+}
+
+/* collapse into one column on small devices */
+@media (max-width: 768px) {
+  .grail {
+    grid-template-areas:
+      "header"
+      "nav"
+      "content"
+      "side"
+      "footer";
+
+    grid-template-columns: 1fr;
+    grid-template-rows:
+      auto /* Header */
+      minmax(75px, auto) /* Nav */
+      1fr /* Content */
+      minmax(75px, auto) /* Sidebar */
+      auto; /* Footer */
+  }
+
+  nav, aside {
+    margin: 0;
+  }
+}
+
+
+
+/* the grid */
+.grail {
+  display: grid;
+
+  grid-template-areas:
+    "header header header"
+    "nav content side"
+    "footer footer footer";
+
+  grid-template-columns: 200px 1fr 200px;
+  grid-template-rows: auto 1fr auto;
+  grid-gap: 10px;
+
+  height: 100vh;
+}
+
+/* grid items */
+header {
+  grid-area: header;
+}
+
+nav {
+  grid-area: nav;
+  margin-left: 0.5rem;
+}
+
+main {
+  grid-area: content;
+}
+
+aside {
+  grid-area: side;
+  margin-right: 0.5rem;
+}
+
+footer {
+  grid-area: footer;
+}
+
+.banner {
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  overflow: hidden;
+  width: 100%;
+  /* height: 100%; */
+  /* margin: 10px; */
+  background: url(https://www.runescape.com/img/rs3/tabbedelement.png);
+}
+
+.banner h1 {
+  color: gold;
+}
+
+/*  
+We can use flexbox on our header for example
+to have the elements inside the header container
+be evenly distributed on the horizontal axis:
+*/
+
+/*  
+header {
+  grid-area: header;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+*/

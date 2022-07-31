@@ -1,0 +1,51 @@
+
+
+/* If the screen size is 600px wide or less, hide the element */
+@media only screen and (max-width: 600px) {
+  .main {
+    display: none;
+  }
+}
+
+.header {
+  position: fixed;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  background: gray;
+  height: 80px;
+  top: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  margin-top: 0px;
+  flex: 0 1 auto;
+}
+
+ .header img {
+  display: block;
+  margin-left: 50px;
+  margin-right: 20px;
+}
+
+.header h1 {
+  margin-top: 3px;
+}
+
+.nav-cust {
+  margin-left: 860px;
+}
+
+.main {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  margin-top: 175px;
+  align-items: center;
+  align-content: center;
+}
+
+form {
+  margin: 30px;
+}
+

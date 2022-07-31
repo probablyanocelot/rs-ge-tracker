@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "..\\.plib"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "rs_api"
+	}
+}
